@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- 8.11.2
+script:
+- npm run lint
+- npm run hunt
+- npm run cover
+notifications:
+  slack:
+    secure: CyBiBijQ/QTpqrZt9zy+B4l9Fm5J8tGTVQwbWUqjpBMVWc85jxc3gCctKwAw2oF66nKgXGebRp3NWIA8X+O/JU3/DckOZclF2WwuS+AFbT13/yGFmi0s37kPw/1cBftXVnYBiynCJtrzxRROWdW2M/vRtvZ4twgeCQ5qBJ0qv7j551zUOLB6/Q3ZHRWIvvO8CVSNCDGxd2u3nrPddZojYUgR4NDbp7NKU9ui37iCWY0J3K3a0/IkIfegJCQ5b1BcAWZS5xeRvqvshsAU6lwd34n3QtG1EGjwa6V5JE52bEw7dUO5pTHcR5hzJWXCJ/9YOX76MK7BufzC5UQ91z+hbcLIInzC4FQPUGi5c5GGGsCqaQM3AXpl4KG2kq+TF7bpaqThaBJ3Qu7sqX08SngAhxoQDdqEajvhhlQfCV2yS71jQXuakYT9ATNLY4tf/3GIWzZa4nQmc6Z8QmEhvA58xkTekpc8jgZLuf1ADNxS8uKZ0MHj7GL1ADLRtc/A1oPHZk/tQK6zdhFw8CKVEDVsOKnb09PzEPvaK7TlqvxEGJ2Adc9Hs3gGreP7seIVidO2R4PVPOI15pixgt4fAwPg1aXpKdlasuZHTvMcFh2Y2RZBvg6CMppaRTyC/MCrX6Iwph4EJalf+apBns2+JhV+BtzpFxEPaTgT9LySRLoP5wM=
