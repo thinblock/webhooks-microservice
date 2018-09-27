@@ -4,6 +4,7 @@ interface EnvConfig {
   port: number;
   env: string;
   debug: boolean;
+  snsNotificationARN: string;
   db: string;
   test: boolean;
   aws_region: string;

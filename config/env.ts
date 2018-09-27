@@ -14,6 +14,7 @@ const config: EnvConfig = {
   root: path.join(__dirname, '/..'),
   port: 8080,
   db: process.env.TB_WORKERS_REDIS_DB_STRING,
+  snsNotificationARN: process.env.TB_SNS_NOTIFICATION_TOPIC,
   aws_region: process.env.TB_AWS_REGION || 'ap-southeast-1'
 };
 

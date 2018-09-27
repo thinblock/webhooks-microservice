@@ -1,6 +1,6 @@
 import { createQueue, Job } from 'kue';
 import { logger } from '../utils/logger';
-import { publishMessage } from '../utils/helpers';
+import { publishMessage, triggerNotification } from '../utils/helpers';
 import { config } from './env';
 import { oneLine } from 'common-tags';
 
@@ -28,7 +28,11 @@ async function processJob(jobData: any) {
   let errored = null;
 
   try {
-    // If all conditions are true, publish actions events
+    try {
+      triggerNotification({ jobId: jobData._id, event: 'webhook_triggered', data: {} });
+    } catch (e) {
+      logger.error(oneLine`[Error] Error while notifying event for Job: ${jobData._id}`);
+    }
     logger.info(`[i] Publishing events for ${actions.length} actions with Job: ${jobData._id}`);
     await publishActions(actions);
     logger.info(oneLine`
